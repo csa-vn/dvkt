@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     transform: translateX(-50%);
 }
-
+/* Section Specific Styles */
 #benefits .section-title::after,
 #quote .section-title::after {
     left: 50%;
@@ -90,14 +90,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero-section {
     height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/pexels-karolina-grabowska-4475523.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
 }
 
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 

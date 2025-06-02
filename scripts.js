@@ -1,5 +1,11 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Force reload CSS to prevent caching issues
+    const linkElement = document.createElement('link');
+    linkElement.rel = 'stylesheet';
+    linkElement.href = 'style.css?v=' + new Date().getTime();
+    document.head.appendChild(linkElement);
+    
     const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
     
     navLinks.forEach(function(link) {
