@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVKTOAN - Dịch vụ Kế toán, Kiểm toán & Thuế</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">DVKT</span>OAN
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Dịch vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Lợi ích</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="#quote">Báo giá</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bold text-white mb-4">DVKTOAN – Giải pháp toàn diện về kế toán, kiểm toán và thuế cho doanh nghiệp</h1>
+                    <p class="lead text-white mb-5">DVKTOAN là đơn vị cung cấp dịch vụ kế toán – kiểm toán – tư vấn thuế và pháp lý chuyên nghiệp. Chúng tôi giúp doanh nghiệp tiết kiệm thời gian, tối ưu chi phí và đảm bảo tuân thủ pháp luật.</p>
+                    <a href="#quote" class="btn btn-primary btn-lg me-3">Nhận báo giá</a>
+                    <a href="#services" class="btn btn-outline-light btn-lg">Xem dịch vụ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Categories Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Dịch vụ nổi bật</h2>
+                    <p class="text-muted">Chúng tôi cung cấp các giải pháp tài chính toàn diện cho doanh nghiệp của bạn</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="service-category" data-target="audit-services">
+                        <div class="icon-box text-center">
+                            <i class="fas fa-search-dollar fa-3x text-primary mb-3"></i>
+                            <h4>Kiểm toán</h4>
+                            <p class="text-muted">Dịch vụ kiểm toán chuyên nghiệp</p>
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary btn-sm service-btn">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="service-category" data-target="accounting-services">
+                        <div class="icon-box text-center">
+                            <i class="fas fa-calculator fa-3x text-primary mb-3"></i>
+                            <h4>Kế toán</h4>
+                            <p class="text-muted">Dịch vụ kế toán trọn gói</p>
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary btn-sm service-btn">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="service-category" data-target="tax-services">
+                        <div class="icon-box text-center">
+                            <i class="fas fa-file-invoice-dollar fa-3x text-primary mb-3"></i>
+                            <h4>Tư vấn thuế</h4>
+                            <p class="text-muted">Tối ưu hóa thuế doanh nghiệp</p>
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary btn-sm service-btn">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="service-category" data-target="business-services">
+                        <div class="icon-box text-center">
+                            <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
+                            <h4>Tư vấn doanh nghiệp</h4>
+                            <p class="text-muted">Giải pháp phát triển bền vững</p>
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary btn-sm service-btn">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed Services Content -->
+            <div class="service-details mt-5">
+                <div id="audit-services" class="service-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-4">A. Dịch vụ kiểm toán</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Kiểm toán báo cáo tài chính</h5>
+                                    <p class="card-text">Đảm bảo tính chính xác và minh bạch trong báo cáo tài chính của doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Kiểm toán nội bộ</h5>
+                                    <p class="card-text">Rà soát quy trình, cải thiện kiểm soát nội bộ và tăng cường quản trị doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Dịch vụ kiểm toán đặc thù</h5>
+                                    <p class="card-text">Giải pháp kiểm toán cho các lĩnh vực đặc biệt và các yêu cầu đặc thù của doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Kiểm kê hàng hóa – tài sản</h5>
+                                    <p class="card-text">Đảm bảo tính chính xác của tài sản và hàng tồn kho với quy trình kiểm kê chuyên nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="accounting-services" class="service-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-4">B. Dịch vụ kế toán</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Kế toán hộ kinh doanh</h5>
+                                    <p class="card-text">Dịch vụ kế toán chuyên biệt cho các hộ kinh doanh cá thể với chi phí hợp lý.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Ghi sổ kế toán và lập BCTC</h5>
+                                    <p class="card-text">Thực hiện ghi chép sổ sách và lập báo cáo tài chính theo đúng quy định.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Kế toán trọn gói – kế toán nội bộ</h5>
+                                    <p class="card-text">Giải pháp kế toán toàn diện, giúp doanh nghiệp tập trung vào hoạt động kinh doanh cốt lõi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Dịch vụ tính lương – BHXH</h5>
+                                    <p class="card-text">Quản lý lương, bảo hiểm và các khoản phúc lợi cho nhân viên theo đúng quy định pháp luật.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Báo cáo tài chính theo IFRS, GAAP</h5>
+                                    <p class="card-text">Lập báo cáo tài chính theo chuẩn mực quốc tế cho doanh nghiệp có yếu tố nước ngoài.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tax-services" class="service-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-4">C. Tư vấn thuế</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Rà soát tuân thủ thuế</h5>
+                                    <p class="card-text">Kiểm tra và đảm bảo việc tuân thủ các quy định thuế hiện hành.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Báo cáo chuyển giá</h5>
+                                    <p class="card-text">Lập hồ sơ chuyển giá theo quy định cho các doanh nghiệp có giao dịch liên kết.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Thanh – kiểm tra thuế</h5>
+                                    <p class="card-text">Hỗ trợ doanh nghiệp trong quá trình thanh kiểm tra thuế từ cơ quan nhà nước.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Quản lý rủi ro thuế</h5>
+                                    <p class="card-text">Nhận diện và phòng ngừa các rủi ro thuế tiềm ẩn cho doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Quyết toán thuế TNCN</h5>
+                                    <p class="card-text">Thực hiện quyết toán thuế thu nhập cá nhân cho nhân viên và người lao động.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Giải trình và xin hoàn thuế GTGT</h5>
+                                    <p class="card-text">Hỗ trợ doanh nghiệp trong quá trình giải trình và xin hoàn thuế GTGT.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Tư vấn ưu đãi và tái cấu trúc thuế</h5>
+                                    <p class="card-text">Tối ưu hóa cơ cấu thuế và tận dụng các ưu đãi thuế hiện hành cho doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="business-services" class="service-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-4">D. Tư vấn doanh nghiệp</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Thành lập, thay đổi, giải thể doanh nghiệp</h5>
+                                    <p class="card-text">Hỗ trợ các thủ tục pháp lý trong toàn bộ vòng đời doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Mua bán – sáp nhập (M&A)</h5>
+                                    <p class="card-text">Tư vấn chiến lược và thực hiện các giao dịch mua bán, sáp nhập doanh nghiệp.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Hoàn thiện hệ thống kiểm soát nội bộ</h5>
+                                    <p class="card-text">Thiết kế và cải tiến hệ thống kiểm soát nội bộ nhằm nâng cao hiệu quả quản trị.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-check-circle text-primary me-2"></i>Tư vấn pháp lý định kỳ</h5>
+                                    <p class="card-text">Cung cấp dịch vụ tư vấn pháp lý thường xuyên giúp doanh nghiệp hoạt động an toàn.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Lợi ích khách hàng nhận được</h2>
+                    <p class="text-muted">Chúng tôi cam kết mang lại giá trị thực cho doanh nghiệp của bạn</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center p-4">
+                        <div class="icon-circle mb-4">
+                            <i class="fas fa-clock fa-3x"></i>
+                        </div>
+                        <h4>Cam kết đúng hạn</h4>
+                        <p>Chúng tôi đảm bảo hoàn thành công việc đúng thời hạn, giúp doanh nghiệp tránh các rủi ro về mặt thời gian.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center p-4">
+                        <div class="icon-circle mb-4">
+                            <i class="fas fa-user-tie fa-3x"></i>
+                        </div>
+                        <h4>Đội ngũ chuyên nghiệp</h4>
+                        <p>Nhân sự giàu kinh nghiệm, được đào tạo bài bản, luôn cập nhật các quy định mới nhất về kế toán và thuế.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center p-4">
+                        <div class="icon-circle mb-4">
+                            <i class="fas fa-hand-holding-usd fa-3x"></i>
+                        </div>
+                        <h4>Tư vấn toàn diện – chi phí hợp lý</h4>
+                        <p>Cung cấp giải pháp tổng thể với chi phí tối ưu, giúp doanh nghiệp tiết kiệm chi phí vận hành.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title">Nhận báo giá miễn phí</h2>
+                    <p class="mb-4">Vui lòng điền thông tin để nhận báo giá chi tiết cho dịch vụ bạn quan tâm. Chúng tôi sẽ liên hệ lại trong vòng 24 giờ.</p>
+                    
+                    <div class="quote-features mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-small me-3">
+                                <i class="fas fa-check-circle text-primary"></i>
+                            </div>
+                            <p class="mb-0">Báo giá chi tiết theo nhu cầu doanh nghiệp</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-small me-3">
+                                <i class="fas fa-check-circle text-primary"></i>
+                            </div>
+                            <p class="mb-0">Miễn phí tư vấn ban đầu</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="icon-small me-3">
+                                <i class="fas fa-check-circle text-primary"></i>
+                            </div>
+                            <p class="mb-0">Giải pháp tối ưu cho doanh nghiệp của bạn</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="quote-form-card">
+                        <form id="quoteForm">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Tên công ty</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="service" class="form-label">Dịch vụ quan tâm</label>
+                                <select class="form-select" id="service" required>
+                                    <option value="" selected disabled>Chọn dịch vụ</option>
+                                    <option value="audit">Dịch vụ kiểm toán</option>
+                                    <option value="accounting">Dịch vụ kế toán</option>
+                                    <option value="tax">Tư vấn thuế</option>
+                                    <option value="business">Tư vấn doanh nghiệp</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Yêu cầu cụ thể</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Gửi yêu cầu báo giá</button>
+                            </div>
+                        </form>
+                        <div id="quoteSuccess" class="alert alert-success mt-3 d-none">
+                            Cảm ơn bạn đã gửi yêu cầu! Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">Liên hệ với chúng tôi</h4>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i> <a href="tel:+84901234567" class="text-white">090 123 4567</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i> <a href="mailto:info@dvkt.com.vn" class="text-white">info@dvkt.com.vn</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">Giờ làm việc</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Thứ Hai - Thứ Sáu: 8:00 - 17:30</li>
+                        <li class="mb-2">Thứ Bảy: 8:00 - 12:00</li>
+                        <li>Chủ Nhật: Nghỉ</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Kết nối với chúng tôi</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                    
+                    <div class="cta-buttons mt-4">
+                        <a href="https://zalo.me/" class="btn btn-outline-light me-2 mb-2 mb-md-0">
+                            <i class="fas fa-comment me-2"></i> Zalo
+                        </a>
+                        <a href="https://m.me/" class="btn btn-outline-light me-2 mb-2 mb-md-0">
+                            <i class="fab fa-facebook-messenger me-2"></i> Messenger
+                        </a>
+                        <a href="tel:+84901234567" class="btn btn-outline-light">
+                            <i class="fas fa-phone-alt me-2"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 DVKTOAN. Tất cả quyền được bảo lưu.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Thiết kế và phát triển bởi DVKTOAN</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed CTA buttons -->
+    <div class="fixed-cta">
+        <a href="tel:+84901234567" class="cta-hotline">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://zalo.me/" class="cta-zalo">
+            <i class="fas fa-comment"></i>
+        </a>
+        <a href="https://m.me/" class="cta-messenger">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
