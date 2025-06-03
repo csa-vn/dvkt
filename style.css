@@ -1,0 +1,32 @@
+/* Social Icons Styling Update */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white !important;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background-color: white;
+    color: #000 !important;
+}
+
+/* CTA Buttons Styling Update */
+.cta-buttons .btn-outline-light {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    border-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.cta-buttons .btn-outline-light:hover,
+.cta-buttons .btn-outline-light:focus {
+    background-color: #fff;
+    color: #000 !important;
+    border-color: #fff;
+}
