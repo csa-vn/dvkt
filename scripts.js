@@ -1,139 +1,139 @@
-// Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
-    // Force reload CSS to prevent caching issues
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.href = 'style.css?v=' + new Date().getTime();
-    document.head.appendChild(linkElement);
-    
+
+    // --- Smooth scrolling for navigation links and mobile menu closing ---
     const navLinks = document.querySelectorAll('.navbar-nav a.nav-link');
-    
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
     navLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            // Get the target section id
+
             const targetId = this.getAttribute('href');
-            
-            // Scroll to the target section smoothly
             document.querySelector(targetId).scrollIntoView({
                 behavior: 'smooth'
             });
-            
+
             // Close the mobile navbar if open
-            const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
                 navbarCollapse.classList.remove('show');
             }
-            
-            // Update active nav link
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-            this.classList.add('active');
+
+            // Update active nav link (handled by scroll spy for better accuracy)
+            // This is removed here to prevent conflicts with the scroll spy
         });
     });
-    
-    // Service category tabs functionality
+
+    // --- Service category tabs functionality ---
     const serviceButtons = document.querySelectorAll('.service-btn');
     const serviceContents = document.querySelectorAll('.service-content');
-    
-    // Show the first service content by default
-    document.getElementById('audit-services').classList.add('active');
-    
+    const serviceDetailsSection = document.querySelector('.service-details');
+
+    // Initially hide all service content and the service details section
+    serviceContents.forEach(content => content.classList.remove('active'));
+    if (serviceDetailsSection) {
+        serviceDetailsSection.style.display = 'none';
+    }
+
     serviceButtons.forEach(button => {
         button.addEventListener('click', function() {
             const target = this.closest('.service-category').dataset.target;
-            
+
+            // Show the service details section
+            if (serviceDetailsSection) {
+                serviceDetailsSection.style.display = 'block';
+            }
+
             // Hide all service contents
             serviceContents.forEach(content => {
                 content.classList.remove('active');
             });
-            
+
             // Show the selected service content
-            document.getElementById(target).classList.add('active');
-            
-            // Scroll to the service details
-            document.querySelector('.service-details').scrollIntoView({
+            const targetContent = document.getElementById(target);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+
+            // Scroll to the service details section
+            serviceDetailsSection.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
         });
     });
-    
-    // Quote form submission
+
+    // --- Quote form submission ---
     const quoteForm = document.getElementById('quoteForm');
+    const quoteSuccessMessage = document.getElementById('quoteSuccess');
+
     if (quoteForm) {
         quoteForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form values
-            const fullName = document.getElementById('fullName').value;
-            const company = document.getElementById('company').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const service = document.getElementById('service').value;
-            const message = document.getElementById('message').value;
-            
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                company: document.getElementById('company').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+
             // In a real application, you would send this data to a server
-            console.log({
-                fullName: fullName,
-                company: company,
-                phone: phone,
-                email: email,
-                service: service,
-                message: message
-            });
-            
+            console.log(formData);
+
             // Show success message
-            document.getElementById('quoteSuccess').classList.remove('d-none');
-            
+            if (quoteSuccessMessage) {
+                quoteSuccessMessage.classList.remove('d-none');
+            }
+
             // Reset the form
             this.reset();
-            
+
             // Hide success message after 5 seconds
             setTimeout(function() {
-                document.getElementById('quoteSuccess').classList.add('d-none');
+                if (quoteSuccessMessage) {
+                    quoteSuccessMessage.classList.add('d-none');
+                }
             }, 5000);
         });
     }
-    
-    // Scroll spy functionality
+
+    // --- Scroll spy functionality ---
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
-        
-        // Get all sections
-        const sections = document.querySelectorAll('section, header');
-        
+        const sections = document.querySelectorAll('section, header'); // Include header if it's a target for nav links
+
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            // Adjust offset to trigger active state a bit before the section reaches the very top
+            const sectionTop = section.offsetTop - 150; 
             const sectionBottom = sectionTop + section.offsetHeight;
             const sectionId = section.getAttribute('id');
-            
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                // Remove active class from all nav links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                });
-                
-                // Add active class to the corresponding nav link
+                navLinks.forEach(link => link.classList.remove('active'));
                 const activeLink = document.querySelector(`.navbar-nav a[href="#${sectionId}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
                 }
             }
         });
-        
+
         // Add box shadow to navbar when scrolled
         const navbar = document.querySelector('.navbar');
-        if (scrollPosition > 50) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
+        if (navbar) {
+            if (scrollPosition > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
         }
     });
-    
-    // Animation on scroll for benefits cards
+
+    // --- Animation on scroll for benefits cards ---
     const benefitCards = document.querySelectorAll('.benefit-card');
-    
+
     const benefitObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -141,9 +141,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 benefitObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
-    
+    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
     benefitCards.forEach(card => {
         benefitObserver.observe(card);
+    });
+
+    // --- Smooth scroll and display service details from footer/contact links ---
+    document.querySelectorAll('.service-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            const targetContent = document.getElementById(targetId);
+
+            if (targetContent && serviceDetailsSection) {
+                serviceDetailsSection.style.display = 'block'; // Show the service details container
+                serviceContents.forEach(content => content.classList.remove('active')); // Hide all others
+                targetContent.classList.add('active'); // Show the specific content
+                serviceDetailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
     });
 });
